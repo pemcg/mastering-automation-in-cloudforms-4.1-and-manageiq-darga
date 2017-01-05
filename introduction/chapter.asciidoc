@@ -33,7 +33,7 @@ Providers are broadly divided into categories, and as of CloudForms 4.1/ManageIQ
 
 ==== Cloud Providers
 
-Cloud providers enable us to manage three _public_ clouds; Amazon Web Services, Google Compute Engine, and Microsoft Azure. There is also a cloud provider that can connect to and manage a _private_ or _on-premise_ Red Hat OpenStack Platform (OSP) cloud (this is the _OverCloud_ in the case that OSP is managed by the Red Hat OpenStack Platform Director).
+Cloud providers enable us to manage three _public_ clouds; Amazon EC2, Google Compute Engine, and Microsoft Azure. There is also a cloud provider that can connect to and manage a _private_ or _on-premise_ Red Hat OpenStack Platform (OSP) cloud (this is the _OverCloud_ in the case that OSP is managed by the Red Hat OpenStack Platform Director).
 
 ==== Infrastructure Providers
 
@@ -43,9 +43,9 @@ Infrastructure providers enable us to manage three traditional infrastructure pr
 
 Configuration management providers enable us to use the capabilities of Red Hat Satellite (or Foreman), and Ansible Tower for configuration management. The Satellite provider enables us to use Foreman _host groups_, and extends the provisioning capability to include _bare-metal_ (i.e. non-virtual) servers. The Ansible Tower provider allows us to run Ansible jobs as part of an Automate workflow.
 
-==== Networking Providers
+==== Network Providers
 
-CloudForms 4.1 and ManageIQ _Darga_ ship with a networking provider for OpenStack Neutron. This is automatically configured if we add an OpenStack cloud provider.
+Network providers allow us to visualize and manage the software-defined network components in our virtual or cloud infrastructure. Currently the only network provider is for OpenStack Neutron, and this is automatically configured if we add an OpenStack cloud or OSP Director infrastructure provider.
 
 ==== Container Providers
 
@@ -61,9 +61,9 @@ Our example organization has an established VMware vSphere 5.5 virtual environme
 
 Company XYZ is a large producer of several varieties of widget, and the widget development test cycle involves creating many short-lived instances in an OpenStack private cloud, to cycle through the test suites. The developers like to have a service catalog from which they can order one of the many widget test environments, and at any time there may be several hundred instances running various test configurations.
 
-The web developers in the company are in the process of re-developing the main Internet web portal as a scalable public cloud workload hosted in Amazon Web Services (AWS). The web portal provides a rich product catalog, online documentation, knowlegebase and ecommerce shopping area to customers.
+The web developers in the company are in the process of re-developing the main Internet web portal as a scalable public cloud workload hosted in Amazon EC2. The web portal provides a rich product catalog, online documentation, knowlegebase and ecommerce shopping area to customers.
 
-This organization uses CloudForms to manage the workflows that provision virtual machines into the vSphere virtual infrastructure, Amazon Web Services, and OpenStack. The users have a self-service catalog to provision individual virtual machine workloads into either VMware or Amazon, or entire test suites into OpenStack. CloudForms orchestration workflows help with the maintenance of an _image factory_ that keeps virtual machine images updated and published as VMware templates, Amazon Machine Images (AMIs) and OpenStack _Glance_ images.
+This organization uses CloudForms to manage the workflows that provision virtual machines into the vSphere virtual infrastructure, Amazon EC2, and OpenStack. The users have a self-service catalog to provision individual virtual machine workloads into either VMware or Amazon, or entire test suites into OpenStack. CloudForms orchestration workflows help with the maintenance of an _image factory_ that keeps virtual machine images updated and published as VMware templates, Amazon Machine Images (AMIs) and OpenStack _Glance_ images.
 
 As part of the provisoning process CloudForms also manages the integration workflows that allow newly provisoned virtual machines to be automatically registered with the Satellite 6 server, and an in-house configuration management database. This ensures that newly provisioned virtual machines are configured by Puppet according to server role, patched with the latest updates, with a full inventory visible to the help-desk system.
 
@@ -124,7 +124,7 @@ Typical integration actions might be to extend the virtual machine provisioning 
 
 === The Appliance
 
-To simplify installation, both CloudForms are ManageIQ are distributed as fully installed virtual machine templates, often just referred to as _Appliances_ for convenience. An appliance comes pre-configured with everything we need. A CloudForms 4.2 appliance runs RHEL 7.2 (CentOS 7.2 in the case of ManageIQ), with PostgreSQL 9.4, Rails 5.0, the CloudForms/ManageIQ application, and all associated Ruby gems installed. Appliances are downloadable as a virtual machine image template in formats suitable for VMware, Red Hat Enterprise Virtualization, OpenStack, Microsoft's System Center Virtual Machine Manager or Azure cloud, and Google Compute Engine. They are also available as a Docker container image.
+To simplify installation, both CloudForms are ManageIQ are distributed as fully installed virtual machine templates, often just referred to as _Appliances_ for convenience. An appliance comes pre-configured with everything we need. A CloudForms 4.1 appliance runs RHEL 7.2 (CentOS 7.2 in the case of ManageIQ), with PostgreSQL 9.4, Rails 5.0, the CloudForms/ManageIQ application, and all associated Ruby gems installed. Appliances are downloadable as a virtual machine image template in formats suitable for VMware, Red Hat Enterprise Virtualization, OpenStack, Amazon EC2, Microsoft's System Center Virtual Machine Manager or Azure cloud, and Google Compute Engine. They are also available as a Docker container image.
 
 ==== Ruby and Rails
 
@@ -163,7 +163,6 @@ _CloudForms Management Engine_ is the name of the CloudForms virtual appliance t
 |Botvinnik|13 - 22|5.4|3.2
 |Capablanca|23 - 33|5.5|4.0
 |Darga|34 - 42|5.6|4.1
-|Euwe| 43 -|5.7|4.2
 |=======
 
 === Summary
