@@ -87,7 +87,7 @@ The built-in WebUI code editor is fairly basic. It is often easier to develop in
 
 === Version Control
 
-Git integration for the Automate datastore has been introduced in CloudForms 4.2/ManageIQ _Euwe_. 
+There is no version control or VCS integration in CloudForms 4.1/ManageIQ _Darga_, although this is planned for the next release.
 
 Several of Red Hat's US consultants have also created an open source project for handling version control and continuous integration (CI) of CloudForms artefacts such as Automate code and dialogs, across regions. footnote:[The project code is located https://github.com/rhtconsulting/miq-ci[here]]
 

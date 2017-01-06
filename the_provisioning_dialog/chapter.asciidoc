@@ -177,11 +177,6 @@ In some cases it's useful to be able to expand the range of options presented by
 image::images/ss2.png[Screenshot,380,align="center"]
 {zwsp} +
 
-[NOTE]
-====
-CloudForms 4.2/ManageIQ _Euwe_ has increased the default memory sizes available in this drop-down
-====
-
 These options come from the `:vm_memory` dialog section:
 
 ....

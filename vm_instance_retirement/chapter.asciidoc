@@ -45,11 +45,6 @@ $evm.root['vm'].retirement_warn=
 $evm.root['vm'].retires_on=
 ....
 
-[NOTE]
-====
-CloudForms 4.2/ManageIQ _Euwe_ also added a new method `extend_retires_on` so that the retirement date can be extended.
-====
-
 It also has several attributes:
 
 ....

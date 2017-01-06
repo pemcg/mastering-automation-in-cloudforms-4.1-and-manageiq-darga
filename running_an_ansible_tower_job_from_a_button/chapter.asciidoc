@@ -53,13 +53,6 @@ As several of the playbook commands require root privileges, we must ensure that
 image::images/ss4.png[Screenshot,250,align="center"]
 {zwsp} +
 
-CloudForms 4.2/ManageIQ _Euwe_ now requires the *Prompt on launch* checkbox to be ticked for the *Limit* element (see <<i5>>). When we submit a job request from CloudForms/ManageIQ the limit switch is used to pass the name of the host or comma-separated list of hosts on which to run the job.
-
-[[i5]]
-.Setting Prompt on launch for the Limit element
-image::images/ss11.png[Screenshot,250,align="center"]
-{zwsp} +
-
 We'll define some defaults for the extra variables that will be passed to the playbook:
 
 * ntpserver (NTP server IP address) 
