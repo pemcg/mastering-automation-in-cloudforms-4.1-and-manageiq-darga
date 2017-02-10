@@ -48,7 +48,6 @@
   * [Service Objects](service_objects/chapter.asciidoc)
   * [Log Analysis During Service Provisioning](log_analysis_during_service_provisioning/chapter.asciidoc)
   * [Service Hierarchies](service_hierarchies/chapter.asciidoc)
-  * [(placeholder) Service Reconfiguration](service_reconfiguration/chapter.asciidoc.wip)
   * [Service Tips and Tricks](service_tips_and_tricks/chapter.asciidoc)
 * [Part 5](part5.asciidoc)
   * [Virtual Machine and Instance Retirement](vm_instance_retirement/chapter.asciidoc)
@@ -61,5 +60,4 @@
   * [Tenancy and Automate](tenancy_and_automate/chapter.asciidoc)
   * [Distributed Automation Processing](distributed_automation_processing/chapter.asciidoc)
   * [Argument Passing and Handling](argument_passing_and_handling/chapter.asciidoc)
-  * [(placeholder) Writing Testable Code](writing_testable_code/chapter.asciidoc.wip)
   * [Miscellaneous Tips](miscellaneous_tips/chapter.asciidoc)
